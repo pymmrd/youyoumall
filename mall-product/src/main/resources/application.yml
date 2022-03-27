@@ -1,0 +1,14 @@
+spring:
+  datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      #MySQL配置
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/mall_pms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+      username: root
+      password:
+
+mybatis-plus:
+    mapper-locations: classpath:/mapper/**/*.xml # 让Mybatis-plus找到mapper.xml文件，适用于自定义复杂sql
+    global-config:
+        db-config:
+            id-type: auto # 配置数据库主键策略，默认是None
